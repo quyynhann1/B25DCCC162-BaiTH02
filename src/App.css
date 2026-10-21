@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.unit-toggle-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.unit-toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Danh sách thành phố */
+.city-list {
+  margin-bottom: 20px;
+}
+
+.city-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.city-btn {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.city-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.city-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+/* Trạng thái */
+.status-message {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.status-message.error {
+  color: #dc3545;
+}
+
+.retry-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* YC6: Responsive Layout */
+.weather-display-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .weather-display-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Thẻ thời tiết hiện tại */
+.current-weather-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 5px 0;
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.weather-details p {
+  margin: 6px 0;
+}
+
+/* Thẻ dự báo 7 ngày */
+.forecast-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.forecast-card {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.forecast-date {
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.forecast-icon {
+  font-size: 1.8rem;
+  margin: 5px 0;
+}
+
+.forecast-desc {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.max-temp {
+  font-weight: bold;
+  color: #e53e3e;
+}
+
+.min-temp {
+  color: #3182ce;
+}
